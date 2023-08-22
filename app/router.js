@@ -2,19 +2,23 @@ import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
-
+import { SnacksController } from "./controllers/SnacksController.js";
 
 export const router = [
   {
     path: '',
-    controller: HomeController,
+    controller: SnacksController,
     view: /*html*/`
-    <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
+    <section class="row justify-content-center">
+      <div id="money" class="col-3">
       </div>
-    </div>
+      <div class = "col-3"> <button onClick ="app.SnacksController.giveMoney()">+ .25</button>
+      </div>
+    </section>
+    <section id="snackContent" class="row">
+    </section>
+    <section id="mySnacks" class="row">
+    </section>
     `
   },
   {
