@@ -14,7 +14,4 @@ export class Snack {
     get snackList() {
         return `<div class="col-4 my-5 text-center d-flex"><img onClick="app.SnacksController.buySnack('${this.name}')" class="imgSizing" src="${this.imgUrl}</">${this.name}, $${this.price}</div>`
     }
-    get mySnacks() {
-        return `<div id="mySnacks" class="col-1>${this.name}</div>"`
-    }
 }
